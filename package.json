@@ -93,5 +93,9 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "description": "Clone the `.env.example` file into `.env`",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }

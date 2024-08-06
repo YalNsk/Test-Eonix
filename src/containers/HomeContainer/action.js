@@ -1,7 +1,15 @@
 import { INCREMENT } from './constant';
+import { DECREMENT } from './constant';
 
 export function incrementAction() {
   return {
     type: INCREMENT,
   };
+}
+
+
+export function decrementAction () {
+    return {
+      type : DECREMENT,
+    };
 }
