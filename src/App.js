@@ -4,9 +4,13 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import configureStore from './configureStore';
 import history from './utils/history';
 import Home from './containers/HomeContainer';
+import homeContainerReducer from './containers/HomeContainer/reducer';
+
 // Create redux store with history
 const initialState = {};
 const store = configureStore(initialState, history);
+
+store.injectReducer('homeContainer', homeContainerReducer);
 
 class App extends Component {
   render() {

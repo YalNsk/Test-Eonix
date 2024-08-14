@@ -1,20 +1,17 @@
-/**
- * Combine all reducers in this file and export the combined reducers.
- */
-
+// redux/reducers.js
 import { combineReducers } from 'redux';
+import homeContainerReducer from './containers/HomeContainer/reducer';
+
+// Importez vos réducteurs de base ici si nécessaire
 // import languageProviderReducer from './containers/LanguageProvider/reducer';
 // import globalReducer from './containers/App/reducer';
 
-/**
- * Merges the main reducer with the router state and dynamically injected reducers
- */
 export default function createReducer(injectedReducers = {}) {
-  const rootReducer = combineReducers({
+  return combineReducers({
+    // Ajoutez des réducteurs de base ici si nécessaire
     // language: languageProviderReducer,
     // global: globalReducer,
-    ...injectedReducers,
+    homeContainer : homeContainerReducer,
+    ...injectedReducers, // Injecte les réducteurs dynamiques
   });
-
-  return rootReducer;
 }
