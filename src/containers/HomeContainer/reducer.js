@@ -1,8 +1,9 @@
-import { INCREMENT } from './constant';
-import { DECREMENT } from './constant';
+import { RESET, DECREMENT, INCREMENT} from "./constant";
 
 export const initialState = {
   counter: 0,
+  initialState : 0
+
 };
 
 
@@ -21,6 +22,12 @@ export default function homeContainerReducer(state = initialState, action) {
           ...state,
           counter: state.counter - 1,
         };  
+
+    case RESET:
+          return {
+            ...state,
+            counter: state.initialState,
+          };
 
     default:
       return state; 

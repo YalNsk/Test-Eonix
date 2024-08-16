@@ -5,6 +5,7 @@ import configureStore from './configureStore';
 import history from './utils/history';
 import Home from './containers/HomeContainer';
 import homeContainerReducer from './containers/HomeContainer/reducer';
+import "./styling.css"
 
 // Create redux store with history
 const initialState = {};
@@ -15,8 +16,9 @@ store.injectReducer('homeContainer', homeContainerReducer);
 class App extends Component {
   render() {
     return (
+      <div className='App'>
       <Provider store={store}>
-        <Router>
+        <Router class>
           <h1>Clic Counter </h1>
           <Switch>
             <Route exact path="/" component={Home} />
@@ -24,6 +26,7 @@ class App extends Component {
           </Switch>
         </Router>
       </Provider>
+      </div>
     )
   }
 }

@@ -1,5 +1,5 @@
-import { INCREMENT } from './constant';
-import { DECREMENT } from './constant';
+import { INCREMENT, RESET, DECREMENT } from './constant';
+
 
 export function incrementAction() {
   return {
@@ -12,4 +12,10 @@ export function decrementAction () {
     return {
       type : DECREMENT,
     };
+}
+
+export function resetAction () {
+  return {
+    type : RESET,
+  };
 }
