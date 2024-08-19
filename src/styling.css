@@ -2,6 +2,8 @@ h1 {
     text-align: center;
     padding-top: 25vh;
     font-size: 5rem;
+    font-family: "Open Sans", sans-serif;
+    text-transform:uppercase;
 }
 div {
     text-align: center;
@@ -16,6 +18,7 @@ div {
 
 p {
     font-size: 2.5rem;
+    font-family: "Open Sans", sans-serif;
 }
 
 .home {
